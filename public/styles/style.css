@@ -1,0 +1,55 @@
+.anunciosss {
+  background-color: rgb(135, 216, 189);
+  padding: 50px;
+}
+* {
+  margin: 0px;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+table tr td img {
+  max-height: 50px;
+}
+
+table {
+  background-color: #00b7ff;
+  padding: 2px;
+  border: solid;
+  margin: 0 auto;
+}
+
+td {
+  padding: 5px;
+}
+
+button {
+  background-color: rgb(243, 98, 243);
+  padding: 12px;
+  border: none;
+}
+
+button a {
+  text-decoration: none;
+  background-color: rgb(243, 98, 243);
+  font-weight: bold;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  background-color: rgb(164, 67, 255);
+}
+
+.informacion {
+  margin: 30px;
+}

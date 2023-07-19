@@ -1,0 +1,44 @@
+[
+  {
+    "nombre": "PlayStation 4",
+    "venta": false,
+    "precio": 150000,
+    "foto": "ps4.jpg",
+    "tags": ["Electronica"]
+  },
+  {
+    "nombre": "Cuadernos",
+    "venta": true,
+    "precio": 500,
+    "foto": "cuadernos.jpg",
+    "tags": ["Cotidiano"]
+  },
+  {
+    "nombre": "Toyota ae86",
+    "venta": true,
+    "precio": 200000,
+    "foto": "toyota.jpg",
+    "tags": ["Automovil"]
+  },
+  {
+    "nombre": "Peluche Pochita",
+    "venta": true,
+    "precio": 1500,
+    "foto": "pochita.jpg",
+    "tags": ["Cotidiano"]
+  },
+  {
+    "nombre": "Laptop Dell 14",
+    "venta": true,
+    "precio": 30000,
+    "foto": "dell.jpg",
+    "tags": ["Electronica"]
+  },
+  {
+    "nombre": "Tazas personalizadas",
+    "venta": true,
+    "precio": 400,
+    "foto": "tazas.jpg",
+    "tags": ["Cotidiano"]
+  }
+]

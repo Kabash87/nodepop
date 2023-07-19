@@ -1,0 +1,60 @@
+//Variables de Inicio
+var app = require("../app");
+var debug = require("debug")("nodepop:server");
+var http = require("http");
+
+var puerto = normalizepuerto(process.env.puerto || "3000");
+app.set("puerto", puerto);
+
+//Servidor
+var server = http.createServer(app);
+
+server.listen(puerto);
+server.on("error", onError);
+server.on("Iniciado", serverOn);
+
+//Configuracion del puerto
+function normalizepuerto(val) {
+  var puerto = parseInt(val, 10);
+
+  if (isNaN(puerto)) {
+    return val;
+  }
+
+  if (puerto >= 0) {
+    // Numero de puerto
+    return puerto;
+  }
+
+  return false;
+}
+
+//Caso de error
+function onError(error) {
+  if (error.syscall !== "activo") {
+    throw error;
+  }
+
+  var bind = typeof puerto === "string" ? "Pipe " + puerto : "Puerto " + puerto;
+
+  // Mensajes de errores
+  switch (error.code) {
+    case "EACCES":
+      console.error(bind + " Requiere privilegios");
+      process.exit(1);
+      break;
+    case "EADDRINUSE":
+      console.error(bind + " esta en uso");
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+function serverOn() {
+  var addr = server.address();
+  var bind =
+    typeof addr === "string" ? "pipe " + addr : "puerto " + addr.puerto;
+  debug("Servidor activo en " + bind + " (env: " + app.get("env") + ")");
+}
